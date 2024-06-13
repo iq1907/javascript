@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      class products {
+        /*constructor(ad,aciklama) {
+            this.Ad = ad;
+            this.Aciklama = aciklama;
+        }*/
+
+        Ad = "";
+        Aciklama = "";
+
+        Ozet(a) {
+          this.KisaAd = this.Ad + a;
+        }
+      }
+
+      products.prototype.Hesapla = function () {
+           console.log('class prototype');         
+      }
+
+      function product() {
+        this.Ad = "";
+        this.Aciklama = "";
+
+        this.Ozet = () => {
+          this.KisaAd = this.Ad;
+        };
+      }
+
+      product.prototype.Hesapla = function(){
+        console.log('prototype test'); 
+      }
+
+      var pro = new product();
+      pro.Aciklama = "Test Aciklama";
+      pro.Ad = "Kiraz";
+      pro.Ozet();
+      pro.Hesapla();
+
+      console.log(pro);
+
+      var pros = new products();
+      pros.Ad = "Şeftali";
+      pros.Aciklama = "Güzeldir";
+      pros.Ozet('...');
+      pros.Hesapla();
+
+      console.log(pros);
+
+      var product = {
+        Name: "Karpuz",
+        Stock: 10,
+        Text: "Cihazınızda pil tasarrufu modunu pil seviyesi %20'ye düştüğünde otomatik olarak devreye girecek şekilde ayarlamak için aşağıdaki adımları izleyebilirsiniz. İşletim sistemine göre bu adımlar değişiklik gösterebilir",
+        Summary: function () {
+          var uzunluk = 20;
+          var ozet = this.Text.split(" ");
+          var ozetS = [];
+          toplamUzunluk = 0;
+
+          if (this.Text.length <= uzunluk) {
+            this.SText = this.Text;
+          } else {
+            for (let index = 0; index < ozet.length; index++) {
+              ozetS[index] = ozet[index];
+
+              toplamUzunluk += ozet[index].length;
+
+              if (toplamUzunluk > uzunluk) break;
+            }
+            this.SText = ozetS.join(" ");
+          }
+        },
+      };
+
+      var text =
+        "Cihazınızda pil tasarrufu modunu pil seviyesi %20'ye düştüğünde otomatik olarak devreye girecek şekilde ayarlamak için aşağıdaki adımları izleyebilirsiniz. İşletim sistemine göre bu adımlar değişiklik gösterebilir";
+
+      function ozetle(text, uzunluk) {
+        var ozet = text.split(" ");
+        var ozetS = [];
+        toplamUzunluk = 0;
+
+        if (text.length <= uzunluk) {
+          return text;
+        } else {
+          for (let index = 0; index < ozet.length; index++) {
+            ozetS[index] = ozet[index];
+
+            toplamUzunluk += ozet[index].length;
+            if (toplamUzunluk > uzunluk) break;
+          }
+
+          return ozetS.join(" ");
+        }
+      }
+
+      //console.log(ozetle(text,40));
+
+      product.Summary();
+      console.log(product);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #todoList {
+            /* list-style: none; */
+        }
+        .todoItem{
+            /* text-decoration: line-through; */
+        }
+
+    </style>
+</head>
+<body>
+        <h1 id="header">To Do List Uygulaması</h1>
+
+        <ul id="todoList">
+
+            <li id="item_8" class="todoItem">
+                <input type="checkbox"> 08:00 : Uyanma
+            </li>
+            <li id="item_9" class="todoItem">
+                <input type="checkbox"> 09:00 : Kahvaltı
+            </li>
+            <li id="item_10" class="todoItem">
+                <input type="checkbox"> 10:00 : İşe varış
+            </li>
+            <li id="item_11" class="todoItem">
+                <input type="checkbox"> 11:00 : Mesai
+            </li>
+            <li id="item_12" class="todoItem">
+                <input type="checkbox"> 12:00 : Öğle Yemeği
+            </li>
+            <li id="item_13" class="todoItem">
+                <input type="checkbox"> 13:00 : Mesai
+            </li>
+            <li id="item_14" class="todoItem">
+                <input type="checkbox"> 14:00 : Mesai
+            </li>
+            <li id="item_15" class="todoItem">
+                <input type="checkbox"> 15:00 : İşe Çıkış
+            </li>
+            <li id="item_16" class="todoItem">
+                <input type="checkbox"> 16:00 : Eve Varış
+            </li>
+            <li id="item_17" class="todoItem">
+                <input type="checkbox"> 17:00 : Yemek
+            </li>
+
+        </ul>
+
+        <script>
+
+            document.getElementById('todoList').style.listStyle = 'none';
+            
+            var listA = document.querySelectorAll('.todoItem');
+
+            /*
+            listA.forEach(function(e) {
+
+                e.style.textDecoration = 'line-through';
+                e.querySelector('input').checked = true;
+                
+            });
+            */
+
+            
+            //var listA = Array.from(document.getElementsByClassName('todoItem')); dönen collection tipini array çevirir
+
+            //console.log(listA);
+
+            
+            var saat = (new Date).getHours();
+            console.log(saat);
+
+            for (const e of listA) {
+
+                if(e.id.split('_')[1] <= saat){
+                    e.setAttribute('style','text-decoration:line-through');
+                    e.querySelector('input').checked = true;
+                }
+
+            }
+
+        </script>
+
+</body>
+</html>

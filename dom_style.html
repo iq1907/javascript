@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aktif {
+            color:aqua;
+            border: 2px;
+            border-radius: 5px;
+            text-shadow: 5px; 
+            background-color: aquamarine;           
+
+        }
+
+        .text{
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">Dom Style Çalışması</h1>
+
+    <script>
+
+        var title = document.getElementById('title');
+        title.style.color = 'red';
+        title.style.border = '1px solid';
+        title.style.borderColor = 'green';
+        title.style.width = '300px ';
+        title.style.padding = '5px';
+        title.style.textAlign = 'right';
+
+        console.log(title.classList);
+
+        title.classList.add("aktif");
+        title.classList.add("text");
+
+        console.log(title.classList);
+
+        title.classList.remove('aktif');
+        title.classList.toggle('text'); // yoksa ekler varsa çıkarır
+
+        console.log(title.classList);
+
+
+
+    </script>
+</body>
+</html>

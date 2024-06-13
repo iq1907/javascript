@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function kareAl(a) {
+            return a*a;
+        }
+
+        function topla(a,b) {
+            return a+b;
+            
+        }
+
+        function tekCift(sayi) {
+            if(sayi % 2 == 0){
+                console.log(sayi + ' ' + 'sayisi çiftir');
+            }
+            else {
+                console.log(sayi + ' ' + 'sayisi tektir');
+            }
+        }
+
+        function factoriyel(sayi) {
+
+            var sonuc = 1;
+            for (let index = 1; index <= sayi; index++) {
+                
+                sonuc = sonuc * index;
+            }
+
+            console.log(sayi + ' nin faktoriyeli = ' + sonuc  );
+            
+        }
+
+        function diziYaz(dizi) {
+
+            for (let index = 0; index < dizi.length; index++) {
+                const element = dizi[index];
+
+                console.log(index + ' '+ dizi[index]);
+                
+            }
+
+            dizi.forEach((element,i) => { 
+                console.log(i +' ' + element);  
+            });
+            
+        }
+
+        tekCift(4);
+        factoriyel(9);
+        diziYaz([1,4,5]);
+
+
+    </script>
+</body>
+</html>

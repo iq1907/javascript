@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        .kutu{
+            height: 120px;
+            width: 120px;
+            margin: 20px;
+            float: left;
+        }
+
+        #mavi{
+            background-color: blue;
+        }
+
+        #kirmizi{
+            background-color: red;
+        }       
+        
+        #sari{
+            background-color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="mavi" class="kutu"></div>
+    <div id="kirmizi" class="kutu"></div>
+    <div id="sari" class="kutu"></div>
+
+    <script>
+
+        var mavi = document.querySelector('#mavi');
+        console.log(mavi);
+
+        var classA = document.querySelectorAll('.kutu');
+        console.log(classA);
+
+        var tagA = document.querySelectorAll('div');
+        console.log(tagA);
+
+        var isBlue = false;
+        setInterval(()=>{
+            if(isBlue){
+                mavi.style.background = 'red';
+            }
+            else{
+                mavi.style.background = 'blue';
+            }
+            isBlue=!isBlue;
+
+        },2000);
+
+
+    </script>
+</body>
+</html>
