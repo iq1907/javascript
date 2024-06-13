@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <ul class="list-group">
+   
+        </ul>
+      </div>
+    </div>
+
+    <script>
+
+        var models = [
+         {name:'Mazda',selected:false},
+         {name:'Toyota',selected:false},
+         {name:'Volvo',selected:false},
+         {name:'Renault',selected:true},
+         {name:'Mercedes',selected:false}
+        ];
+
+        var text = '';
+        for (const i of models) {
+            
+            if(i.selected){
+                text += '<li class="list-group-item active">' + i.name + '</li>';
+            }
+            else{
+                text += '<li class="list-group-item">' + i.name + '</li>';
+            }
+        }
+
+        var ul = document.querySelector('ul');
+        ul.innerHTML = text;
+        
+    </script>
+
+  </body>
+</html>
