@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+        }
         .aktif {
+
             color:aqua;
             border: 2px;
             border-radius: 5px;
             text-shadow: 5px; 
-            background-color: aquamarine;           
+            background-color: aquamarine; 
+            
 
         }
 
@@ -40,12 +47,10 @@
 
         console.log(title.classList);
 
-        title.classList.remove('aktif');
+        //title.classList.remove('aktif');
         title.classList.toggle('text'); // yoksa ekler varsa çıkarır
 
         console.log(title.classList);
-
-
 
     </script>
 </body>
