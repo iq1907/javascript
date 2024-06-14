@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        .kutu{
+            height: 120px;
+            width: 120px;
+            margin: 20px;
+            float: left;
+        }
+
+        #mavi{
+            background-color: blue;
+        }
+
+        #kirmizi{
+            background-color: red;
+        }       
+        
+        #sari{
+            background-color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="mavi" class="kutu"></div>
+    <div id="kirmizi" class="kutu"></div>
+    <div id="sari" class="kutu"></div>
+
+    <script>
+
+        var classA = document.querySelectorAll('.kutu');
+
+        classA.forEach(function(e) {
+            e.addEventListener('click',function() {
+
+                //this.style.display = 'none'; 
+                this.hidden = true; 
+            })
+        });
+
+    </script>
+</body>
+</html>

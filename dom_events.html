@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Best free stock photos in one place.</h1>
+
+    <h3 id="sub-title">Search for free photo..</h3>
+
+    <p>lorem ipsum dolor <strong>sit amet,</strong> consecturer.</p>
+
+    <button type="button" class="change">Changed</button>
+    <ul>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+    </ul>
+    <script>
+
+        var btn = document.querySelector('.change');
+        var title = document.querySelector('#title');
+
+        title.addEventListener('click',()=>{
+
+            title.style.color = 'red';
+
+        });
+
+
+        btn.addEventListener('click', ()=>changeText(btn) );
+
+        function changeText(nesne) {
+            nesne.textContent = 'Changedxxx';
+        }
+
+        var ul = document.querySelector('ul');
+
+        ul.addEventListener('click',function(e) {
+            
+            console.log('ul ' + e.target.textContent);
+            
+        });
+
+        var lis = document.querySelectorAll('li');
+
+        lis.forEach(li=>{
+            li.addEventListener('click',function(){
+                //this anahtar kelimesi ile hangi element tıklandı ise onun özellikleri aktif olur
+                console.log(this.textContent); 
+            })
+        });
+
+        console.log(lis);
+
+    </script>
+  </body>
+</html>
