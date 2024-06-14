@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card">
+            <img src="" class="card-img-top" alt="" />
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <a href="#" target="_blank" class="btn btn-primary"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var models = [
+        {
+          name: "Mazda Cx-3",
+          image: "img/mazda.jpeg",
+          link: "https://arabalarcomtr.b-cdn.net/wp-content/uploads/images/versiyon/660x495/mazda/cx-3/suv/2015/2015-mazda-cx-3-suv-01.jpg",
+        },
+        {
+          name: "Bmw 418d",
+          image: "img/bmw.jpeg",
+          link: "https://arabalarcomtr.b-cdn.net/wp-content/uploads/images/versiyon/660x495/bmw/4-serisi/sedan/2018/bmw-4-serisi-sedan-2018-01.jpg",
+        },
+        {
+          name: "Volvo S60",
+          image: "img/volvo.jpeg",
+          link: "https://arabalarcomtr.b-cdn.net/wp-content/uploads/2024/04/volvo-s60-fiyat.jpg",
+        },
+      ];
+
+      //
+      //
+
+      var vImage = document.querySelector(".card-img-top");
+      var vTitle = document.querySelector(".card-title");
+      var vA = document.querySelector("a");
+
+      setInterval(() => {
+        var i = Math.floor(Math.random() * models.length);
+
+        vImage.setAttribute("src", models[i].image);
+        vTitle.textContent = models[i].name;
+        vA.setAttribute("href", models[i].link);
+      },1000);
+      
+    </script>
+  </body>
+</html>

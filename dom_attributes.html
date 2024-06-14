@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Best free stock photos in one place.</h1>
+
+    <h3 id="sub-title">Search for free photo..</h3>
+
+    <a href="https://www.pexels.com/" target="_blank">Pexcel.com</a>
+
+    <hr />
+
+    <img
+      src="https://images.pexels.com/photos/1057064/pexels-photo-1057064.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt=""
+      width="300px"
+      height="200px"
+    />
+
+    <img
+      src="https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt=""
+      width="300px"
+      height="200px"
+    />
+
+    <script>
+
+        a = document.querySelector("a");
+        console.log(a);
+        console.log(a.getAttribute('href'));
+        a.href = 'http://google.com';
+        a.textContent = 'Google.com';
+
+        img = document.querySelectorAll('img')[0];
+
+        img.setAttribute('src','https://www.pexels.com/tr-tr/fotograf/alan-tarla-saha-yaz-22845596/');
+
+        console.log(img.getAttribute('src')); 
+
+    </script>
+  </body>
+</html>
